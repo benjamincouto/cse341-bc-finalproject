@@ -1,0 +1,403 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Support Cases Sentiment API",
+    "description": "Support Cases Sentiment Api",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "Suport Cases Sentiment API"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/support-cases/": {
+      "get": {
+        "tags": [
+          "Support Cases"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Support Cases"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "caseNumber": {
+                  "example": "any"
+                },
+                "caseOrigin": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "subStatus": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "internalComments": {
+                  "example": "any"
+                },
+                "caseOwner": {
+                  "example": "any"
+                },
+                "customerCode": {
+                  "example": "any"
+                },
+                "createdBy": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/support-cases/{id}": {
+      "get": {
+        "tags": [
+          "Support Cases"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Support Cases"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "caseNumber": {
+                  "example": "any"
+                },
+                "caseOrigin": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "subStatus": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "internalComments": {
+                  "example": "any"
+                },
+                "caseOwner": {
+                  "example": "any"
+                },
+                "customerCode": {
+                  "example": "any"
+                },
+                "createdBy": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Support Cases"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "caseNumber": {
+                  "example": "any"
+                },
+                "caseOrigin": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                },
+                "subStatus": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "internalComments": {
+                  "example": "any"
+                },
+                "caseOwner": {
+                  "example": "any"
+                },
+                "customerCode": {
+                  "example": "any"
+                },
+                "createdBy": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/case-owners/": {
+      "get": {
+        "tags": [
+          "Case Owners"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Case Owners"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "caseOwner": {
+                  "example": "any"
+                },
+                "caseOwnerId": {
+                  "example": "any"
+                },
+                "team": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/case-owners/{id}": {
+      "get": {
+        "tags": [
+          "Case Owners"
+        ],
+        "description": "",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Case Owners"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "caseOwner": {
+                  "example": "any"
+                },
+                "caseOwnerId": {
+                  "example": "any"
+                },
+                "team": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Case Owners"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "caseOwner": {
+                  "example": "any"
+                },
+                "caseOwnerId": {
+                  "example": "any"
+                },
+                "team": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    }
+  }
+}

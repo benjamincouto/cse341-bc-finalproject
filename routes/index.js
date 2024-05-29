@@ -1,6 +1,11 @@
 const router = require('express').Router();
 
-router.get('/', (req, res) => { res.send('Hello World');});
+router.use('/', require('./swagger'));
+
+router.get('/', (req, res) => { 
+    //#swagger.tags=['Suport Cases Sentiment API']
+    res.send('Welcome to the API!');
+});
 
 //supportCases
 router.use('/support-cases', require('./supportCases'))

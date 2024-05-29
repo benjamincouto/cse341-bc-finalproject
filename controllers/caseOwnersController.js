@@ -34,7 +34,59 @@ const getSingle = async (req, res) => {
     }
     };
 
+
+const createCaseOwner = async (req, res) => {
+    //#swagger.tags=['Case Owners']
+    const caseOwner = {
+      caseOwner: req.body.caseOwner,
+      caseOwnerId: req.body.caseOwnerId,
+      team: req.body.team,
+    };
+    const response = await mongodb.getDatabase().db().collection('caseOwners').insertOne(caseOwner);
+    if (response.acknowledged) {
+      res.status(204).send();
+    } else {
+      res.status(500).json(response.error || 'Some error occurred while creating the case owner.')
+    }
+  }
+
+
+const updateCaseOwner = async (req, res) => {
+    //#swagger.tags=['Case Owners']
+    const ownerId = new ObjectId(req.params.id);
+    const caseOwner = {
+        caseOwner: req.body.caseOwner,
+        caseOwnerId: req.body.caseOwnerId,
+        team: req.body.team,
+    }
+    const response = await mongodb.getDatabase().db().collection('caseOwners').replaceOne({ _id: ownerId }, caseOwner);
+    if (response.modifiedCount > 0) {
+        res.status(204).send();
+    } else {
+        res.status(500).jason(response.error || 'Some error occurred while updating the case owner.')
+    }
+}
+
+const deleteCaseOwner = async (req, res) => {
+    //#swagger.tags=['Case Owners']
+    const ownerId = new ObjectId(req.params.id);
+    const caseOwner = {
+        caseOwner: req.body.caseOwner,
+        caseOwnerId: req.body.caseOwnerId,
+        team: req.body.team,
+    }
+    const response = await mongodb.getDatabase().db().collection('caseOwners').deleteOne({ _id: ownerId });
+    if (response.deletedCount > 0) {
+      res.status(204).send();
+    } else {
+      res.status(500).jason(response.error || 'Some error occurred while deleting the case owner.')
+    }
+  }
+
 module.exports = {
     getAll,
     getSingle,
+    createCaseOwner,
+    updateCaseOwner,
+    deleteCaseOwner
 }
