@@ -5,8 +5,8 @@ const doc = {
         title: 'Support Cases Sentiment API',
         description: 'Support Cases Sentiment Api'
     },
-    host: 'localhost:3000',
-    schemes: ['http', 'https']
+    host: 'cse341-bc-finalproject.onrender.com',
+    schemes: ['https']
 };
 
 const outputFile = './swagger.json';
