@@ -1,0 +1,42 @@
+[
+    {
+      "caseOwner": "Alice Johnson",
+      "caseOwnerId": "AJ001",
+      "team": "Support Team A"
+    },
+    {
+      "caseOwner": "Bob Smith",
+      "caseOwnerId": "BS002",
+      "team": "Support Team A"
+    },
+    {
+      "caseOwner": "Charlie Brown",
+      "caseOwnerId": "CB003",
+      "team": "Support Team B"
+    },
+    {
+      "caseOwner": "David Wilson",
+      "caseOwnerId": "DW004",
+      "team": "Support Team B"
+    },
+    {
+      "caseOwner": "Eva Harris",
+      "caseOwnerId": "EH005",
+      "team": "Support Team C"
+    },
+    {
+      "caseOwner": "Frank Adams",
+      "caseOwnerId": "FA006",
+      "team": "Support Team C"
+    },
+    {
+      "caseOwner": "Grace Kelly",
+      "caseOwnerId": "GK007",
+      "team": "Support Team D"
+    },
+    {
+      "caseOwner": "Hank Miller",
+      "caseOwnerId": "HM008",
+      "team": "Support Team D"
+    }
+]
