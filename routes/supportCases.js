@@ -1,7 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
+// Controller
 const supportCasesController = require('../controllers/supportCasesController');
+
+// Validation
+const validation = require('../middleware/validate')
 
 // Get all cases
 router.get('/', supportCasesController.getAll);
@@ -10,10 +14,10 @@ router.get('/', supportCasesController.getAll);
 router.get('/:id', supportCasesController.getSingle)
 
 // Create support case
-router.post('/', supportCasesController.createSupportCase)
+router.post('/', validation.saveSupportCase, supportCasesController.createSupportCase)
 
 // Update support case
-router.put('/:id', supportCasesController.updateSupportCase)
+router.put('/:id', validation.saveSupportCase, supportCasesController.updateSupportCase)
 
 // Delete support case
 router.delete('/:id', supportCasesController.deleteSupportCase)

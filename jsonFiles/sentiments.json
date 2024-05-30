@@ -1,0 +1,52 @@
+[
+    {
+      "sentimentCategory": "Positive",
+      "sentimentDescription": "Expresses satisfaction with the service or resolution provided.",
+      "sentimentNumber": 1
+    },
+    {
+      "sentimentCategory": "Negative",
+      "sentimentDescription": "Expresses dissatisfaction with the service or resolution provided.",
+      "sentimentNumber": 2
+    },
+    {
+      "sentimentCategory": "Neutral",
+      "sentimentDescription": "Expresses a neutral stance, neither satisfied nor dissatisfied with the service.",
+      "sentimentNumber": 3
+    },
+    {
+      "sentimentCategory": "Mixed",
+      "sentimentDescription": "Contains both positive and negative feedback about the service.",
+      "sentimentNumber": 4
+    },
+    {
+      "sentimentCategory": "Happy",
+      "sentimentDescription": "Expresses happiness or delight with the service or resolution.",
+      "sentimentNumber": 5
+    },
+    {
+      "sentimentCategory": "Frustrated",
+      "sentimentDescription": "Expresses frustration or annoyance with the service or unresolved issues.",
+      "sentimentNumber": 6
+    },
+    {
+      "sentimentCategory": "Angry",
+      "sentimentDescription": "Expresses anger or severe dissatisfaction with the service or unresolved issues.",
+      "sentimentNumber": 7
+    },
+    {
+      "sentimentCategory": "Confused",
+      "sentimentDescription": "Expresses confusion or lack of understanding about the service or resolution.",
+      "sentimentNumber": 8
+    },
+    {
+      "sentimentCategory": "Grateful",
+      "sentimentDescription": "Expresses gratitude and appreciation for the service or resolution provided.",
+      "sentimentNumber": 9
+    },
+    {
+      "sentimentCategory": "Concerned",
+      "sentimentDescription": "Expresses concern or worry about the service or potential issues.",
+      "sentimentNumber": 10
+    }
+  ]

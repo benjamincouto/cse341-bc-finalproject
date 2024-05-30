@@ -1,0 +1,22 @@
+[
+    {
+      "teamName": "Support Team A",
+      "teamDescription": "Handles initial customer queries and basic troubleshooting (1st Level).",
+      "teamLead": "Alice Johnson"
+    },
+    {
+      "teamName": "Support Team B",
+      "teamDescription": "Handles escalated issues requiring in-depth technical expertise (2nd Level).",
+      "teamLead": "Charlie Brown"
+    },
+    {
+      "teamName": "Support Team C",
+      "teamDescription": "Focuses on developing solutions and resolving complex technical issues (Developers).",
+      "teamLead": "Eva Harris"
+    },
+    {
+      "teamName": "Support Team D",
+      "teamDescription": "Specializes in handling contracts and providing business support (Business Support).",
+      "teamLead": "Grace Kelly"
+    }
+  ]

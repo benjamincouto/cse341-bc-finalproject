@@ -13,4 +13,11 @@ router.use('/support-cases', require('./supportCases'))
 //caseOwners
 router.use('/case-owners', require('./caseOwners'))
 
+//teams
+router.use('/teams', require('./teams'))
+
+//sentiments
+router.use('/sentiments', require('./sentiments'))
+
+
 module.exports = router
