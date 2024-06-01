@@ -1,6 +1,7 @@
 const mongodb = require('../data/database');
 const ObjectId = require('mongodb').ObjectId;
 
+
 const getAll = async (req, res) => {
     //#swagger.tags=['Case Owners']
     try {
@@ -63,7 +64,7 @@ const updateCaseOwner = async (req, res) => {
     if (response.modifiedCount > 0) {
         res.status(204).send();
     } else {
-        res.status(500).jason(response.error || 'Some error occurred while updating the case owner.')
+        res.status(500).json(response.error || 'Some error occurred while updating the case owner.')
     }
 }
 
@@ -79,7 +80,7 @@ const deleteCaseOwner = async (req, res) => {
     if (response.deletedCount > 0) {
       res.status(204).send();
     } else {
-      res.status(500).jason(response.error || 'Some error occurred while deleting the case owner.')
+      res.status(500).json(response.error || 'Some error occurred while deleting the case owner.')
     }
   }
 

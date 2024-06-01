@@ -7,6 +7,9 @@ const caseOwnersController = require('../controllers/caseOwnersController');
 // Validation
 const validation = require('../middleware/validate')
 
+//Authentication
+const { isAuthenticated } = require('../middleware/authenticate');
+
 // Get all cases
 router.get('/', caseOwnersController.getAll);
 
@@ -14,13 +17,13 @@ router.get('/', caseOwnersController.getAll);
 router.get('/:id', caseOwnersController.getSingle)
 
 // Create case owner
-router.post('/', validation.saveCaseOwner, caseOwnersController.createCaseOwner)
+router.post('/', isAuthenticated, validation.saveCaseOwner, caseOwnersController.createCaseOwner)
 
 // Update case owner
-router.put('/:id', validation.saveCaseOwner, caseOwnersController.updateCaseOwner)
+router.put('/:id', isAuthenticated, validation.saveCaseOwner, caseOwnersController.updateCaseOwner)
 
 // Delete case owner
-router.delete('/:id', caseOwnersController.deleteCaseOwner)
+router.delete('/:id', isAuthenticated, caseOwnersController.deleteCaseOwner)
 
 
 module.exports = router;

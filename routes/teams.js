@@ -7,6 +7,9 @@ const teamsController = require('../controllers/teamsController');
 // Validation
 const validation = require('../middleware/validate')
 
+//Authentication
+const { isAuthenticated } = require('../middleware/authenticate');
+
 // Get all teams
 router.get('/', teamsController.getAll);
 
@@ -14,13 +17,13 @@ router.get('/', teamsController.getAll);
 router.get('/:id', teamsController.getSingle);
 
 // Create team 
-router.post('/', validation.saveTeam, teamsController.createTeam);
+router.post('/', isAuthenticated, validation.saveTeam, teamsController.createTeam);
 
 // Update team 
-router.put('/:id', validation.saveTeam, teamsController.updateTeam);
+router.put('/:id', isAuthenticated, validation.saveTeam, teamsController.updateTeam);
 
 // Delete team
-router.delete('/:id', teamsController.deleteTeam);
+router.delete('/:id', isAuthenticated, teamsController.deleteTeam);
 
 
 module.exports = router;

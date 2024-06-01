@@ -7,6 +7,9 @@ const sentimentsController = require('../controllers/sentimentsController');
 // Validation
 const validation = require('../middleware/validate');
 
+//Authentication
+const { isAuthenticated } = require('../middleware/authenticate');
+
 // Get all cases
 router.get('/', sentimentsController .getAll);
 
@@ -14,13 +17,13 @@ router.get('/', sentimentsController .getAll);
 router.get('/:id', sentimentsController.getSingle);
 
 // Create sentiment
-router.post('/', validation.saveSentiment, sentimentsController.createSentiment);
+router.post('/', isAuthenticated, validation.saveSentiment, sentimentsController.createSentiment);
 
 // Update sentiment
-router.put('/:id', validation.saveSentiment, sentimentsController.updateSentiment);
+router.put('/:id', isAuthenticated, validation.saveSentiment, sentimentsController.updateSentiment);
 
 // Delete sentiment
-router.delete('/:id', sentimentsController.deleteSentiment);
+router.delete('/:id', isAuthenticated, sentimentsController.deleteSentiment);
 
 
 module.exports = router;

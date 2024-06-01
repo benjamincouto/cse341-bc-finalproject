@@ -7,6 +7,9 @@ const supportCasesController = require('../controllers/supportCasesController');
 // Validation
 const validation = require('../middleware/validate')
 
+//Authentication
+const { isAuthenticated } = require('../middleware/authenticate');
+
 // Get all cases
 router.get('/', supportCasesController.getAll);
 
@@ -14,12 +17,12 @@ router.get('/', supportCasesController.getAll);
 router.get('/:id', supportCasesController.getSingle)
 
 // Create support case
-router.post('/', validation.saveSupportCase, supportCasesController.createSupportCase)
+router.post('/', isAuthenticated, validation.saveSupportCase, supportCasesController.createSupportCase)
 
 // Update support case
-router.put('/:id', validation.saveSupportCase, supportCasesController.updateSupportCase)
+router.put('/:id', isAuthenticated, validation.saveSupportCase, supportCasesController.updateSupportCase)
 
 // Delete support case
-router.delete('/:id', supportCasesController.deleteSupportCase)
+router.delete('/:id', isAuthenticated, supportCasesController.deleteSupportCase)
 
 module.exports = router;

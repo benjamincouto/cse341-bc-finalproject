@@ -63,7 +63,7 @@ const updateSentiment = async (req, res) => {
     if (response.modifiedCount > 0) {
         res.status(204).send();
     } else {
-        res.status(500).jason(response.error || 'Some error occurred while updating the sentiment.')
+        res.status(500).json(response.error || 'Some error occurred while updating the sentiment.')
     }
 }
 
@@ -79,7 +79,7 @@ const deleteSentiment = async (req, res) => {
     if (response.deletedCount > 0) {
       res.status(204).send();
     } else {
-      res.status(500).jason(response.error || 'Some error occurred while deleting the sentiment.')
+      res.status(500).json(response.error || 'Some error occurred while deleting the sentiment.')
     }
   }
 
